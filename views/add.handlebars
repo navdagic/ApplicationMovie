@@ -1,0 +1,37 @@
+<section id="add" class="container">
+    <div class="form-wrap">
+      <h1>Dodaj film</h1>
+      <p>Film mozete preporuciti e-postom</p>
+      {{#each errors}}
+        <div class="error">
+                <p>{{text}}</p>
+        </div>
+        {{/each}}
+      <form action="/movies/add" method="POST">
+        <div class="input-group">
+          <label for="title">Naziv filma</label>
+          <input type="text" name="title" id="title" class="input-box" placeholder="npr. Fight club"
+            maxlength="100" value={{title}}>
+        </div>
+        <div class="input-group">
+          <label for="technologies">Zanr</label>
+          <input type="text" name="zanr" id="zanr" class="input-box" placeholder="Komedija, Drama, Triler"
+          maxlength="100" value={{zanr}}>
+        </div>
+        <div class="input-group">
+          <label for="budget">Ocijena</label>
+          <input type="number" name="rating" id="rating" class="input-box" placeholder="npr. 5, 7, 9">
+        </div>
+        <div class="input-group">
+          <label for="description">Opis filma</label>
+          <textarea name="description" id="description" class="input-box" placeholder="Opis filma"
+            rows="10">{{description}}</textarea>
+        </div>
+        <div class="input-group">
+          <label for="budget">E-mail</label>
+          <input type="email" name="contact_email" id="contactemail" class="input-box" placeholder="E-mail">
+        </div>
+        <input type="submit" value="Dodaj film" class="btn btn-reverse">
+      </form>
+    </div>
+  </section>

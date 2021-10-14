@@ -1,0 +1,30 @@
+{
+  "name": "movie",
+  "version": "1.0.0",
+  "description": "Movie app",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "mocha test"
+  },
+  "author": "Nadir Avdagic",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.23.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.4",
+    "pg": "^8.7.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.7.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^9.1.2",
+    "nodemon": "^2.0.13",
+    "nyc": "^15.1.0",
+    "sinon": "^11.1.2",
+    "sinon-chai": "^3.7.0"
+  }
+}

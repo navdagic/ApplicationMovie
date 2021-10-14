@@ -1,0 +1,21 @@
+ <section id="gigs" class="container">
+    <h1>Svi filmovi</h1>
+
+    {{#each movies}}
+     <div class="gig">
+      <h3>Naziv filma: {{dataValues.title}}</h3>
+      <p>Opis {{dataValues.description}}</p>
+      <ul>
+        <li>Ocijena: {{dataValues.rating}}</li>
+        <li><a href="mailto:{{dataValues.contact_email}}" class="btn btn-reverse">Preporuci</a></li>
+      </ul>
+      <div class="tech">
+        <small>Zanr: <span>{{dataValues.zanr}}</span></small>
+      </div>
+    </div>
+
+    {{else}}
+        <p>Lista filmova je prazna</p>
+        {{/each}}
+
+  </section>
